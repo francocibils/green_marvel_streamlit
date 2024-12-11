@@ -45,7 +45,7 @@ if st.button('Process file'):
     # Concat DKS
     dks = pd.concat([mow_df, tmk_df])
     dks['Orden'] = dks['Orden'].astype(float)
-    dks['Fecha'] = pd.to_datetime(dks['Fecha'], format = '%d/%m/%Y', errors = 'coerce')
+    dks['Fecha'] = pd.to_datetime(dks['Fecha'], errors = 'coerce')
 
     # Process
     dfs_dict = {}
